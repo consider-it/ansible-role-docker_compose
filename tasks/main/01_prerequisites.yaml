@@ -3,3 +3,30 @@
     cmd: /usr/bin/docker info
   become: true
   changed_when: false
+
+- name: Ensure basic directory structure
+  become: true
+  block:
+    - name: Ensure /ansible_docker_compose directory
+      ansible.builtin.file:
+        path: /ansible_docker_compose
+        state: directory
+        owner: root
+        group: root
+        mode: "0755"
+
+    - name: Ensure /ansible_docker_compose/projects directory
+      ansible.builtin.file:
+        path: /ansible_docker_compose/projects
+        state: directory
+        owner: root
+        group: root
+        mode: "0755"
+
+    - name: Ensure /ansible_docker_compose/project_data directory
+      ansible.builtin.file:
+        path: /ansible_docker_compose/project_data
+        state: directory
+        owner: root
+        group: root
+        mode: "0755"
