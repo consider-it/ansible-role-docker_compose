@@ -21,3 +21,7 @@ We don't use scopes in this project.
 - <https://gitlab.gnome.org/julianschacher/top-bar-organizer/-/blob/main/CONTRIBUTING.md>
 - <https://eslint.org/docs/latest/contribute/pull-requests#step-2-make-your-changes>
 - <https://github.com/angular/angular/blob/main/CONTRIBUTING.md#type>
+
+## Other
+
+- Make sure you - or rather your editor - follows the `.editorconfig`.
