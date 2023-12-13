@@ -1,0 +1,5 @@
+- name: Run docker info to check if Docker is installed and working
+  ansible.builtin.command:
+    cmd: /usr/bin/docker info
+  become: true
+  changed_when: false
