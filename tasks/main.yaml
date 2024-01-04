@@ -1,3 +1,7 @@
 - name: Ensure prerequisites are met
   ansible.builtin.import_tasks:
     file: main/01_prerequisites.yaml
+
+- name: Ensure project deployment
+  ansible.builtin.import_tasks:
+    file: main/02_project_deploy.yaml
