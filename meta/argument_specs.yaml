@@ -1,0 +1,23 @@
+argument_specs:
+  main:
+    short_description: >-
+      Role for deploying and maintaining docker compose applications.
+    options:
+      docker_compose__projects:
+        description: >-
+          List of docker compose projects to be deployed.
+        type: list
+        elements: dict
+        required: true
+        options:
+          name:
+            description: Name of the docker compose project.
+            type: str
+            required: true
+          files_directory:
+            description: >-
+              Path to the docker compose projects directory, which will be
+              deployed to the remote host.
+              A relative path is relative to the playbooks location.
+            type: path
+            required: true
