@@ -8,6 +8,10 @@ Source code of the [ccchh-ansible repo](https://gitlab.hamburg.ccc.de/ccchh/thin
 It was licensed under the MIT license.
 A copy of the license can be found under: [`licenses/ccchh-ansible_mit_license`](licenses/ccchh-ansible_mit_license)
 
+Source code of the [ansible/molecule repo](https://github.com/ansible/molecule) was either used directly or as a reference.
+It was licensed under the MIT license.
+A copy of the license can be found under: [`licenses/ansible-molecule_mit_license`](licenses/ansible-molecule_mit_license)
+
 ## Links & References
 
 Various interesting links and references related to this role:
