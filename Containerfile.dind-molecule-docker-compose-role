@@ -1,0 +1,11 @@
+# Containerfile for creating extended Docker in Docker image for use by Molecule
+# for testing this role.
+# Based on: https://hub.docker.com/_/docker
+# Also see: https://github.com/docker-library/docker/
+FROM docker
+
+# Add dependencies needed for running Ansible and this role.
+RUN apk add python3 sudo rsync
+# Have the docker binary where Debian has it, since this role expects it to be
+# that way.
+RUN ln -s /usr/local/bin/docker /usr/bin/docker
