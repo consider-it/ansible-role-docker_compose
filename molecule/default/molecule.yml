@@ -6,6 +6,12 @@ platforms:
   - name: molecule-docker-compose-role-dind
     image: dind-molecule-docker-compose-role
 scenario:
+  converge_sequence:
+    - dependency
+    - create
+    - prepare
+    - side_effect side_effect_projects_rev01.yml
+    - converge
   test_sequence:
     - dependency
     - cleanup
@@ -13,8 +19,8 @@ scenario:
     - syntax
     - create
     - prepare
+    - side_effect side_effect_projects_rev01.yml
     - converge
-    - side_effect
     - verify
     - cleanup
     - destroy

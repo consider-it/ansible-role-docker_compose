@@ -1,0 +1,10 @@
+- name: Deploy projects_rev01
+  hosts: molecule
+  roles:
+    - docker_compose
+  vars:
+    docker_compose__projects:
+      - name: mosquitto
+        files_directory: ./files/projects_rev01/mosquitto
+      - name: nginx
+        files_directory: ./files/projects_rev01/nginx
