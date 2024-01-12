@@ -5,3 +5,16 @@ dependency:
 platforms:
   - name: molecule-docker-compose-role-dind
     image: dind-molecule-docker-compose-role
+scenario:
+  test_sequence:
+    - dependency
+    - cleanup
+    - destroy
+    - syntax
+    - create
+    - prepare
+    - converge
+    - side_effect
+    - verify
+    - cleanup
+    - destroy
