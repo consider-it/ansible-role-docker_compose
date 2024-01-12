@@ -1,11 +1,12 @@
-- name: Converge
+- name: Deploy projects_rev02 
   hosts: molecule
-  tasks:
-    - name: Check uname
-      ansible.builtin.raw: uname -a
-      register: result
-      changed_when: false
-
-    - name: Print some info
-      ansible.builtin.assert:
-        that: result.stdout | regex_search("^Linux")
+  roles:
+    - docker_compose
+  vars:
+    docker_compose__projects:
+      - name: mosquitto
+        files_directory: ./files/projects_rev02/mosquitto
+      - name: nginx
+        files_directory: ./files/projects_rev02/nginx
+      - name: nodejs
+        files_directory: ./files/projects_rev02/nodejs
