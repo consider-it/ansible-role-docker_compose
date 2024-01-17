@@ -26,5 +26,7 @@ scenario:
     - verify tests/after_projects_rev01
     - converge
     - verify
+    - side_effect side_effect_projects_rev03.yml
+    - verify tests/after_projects_rev03
     - cleanup
     - destroy

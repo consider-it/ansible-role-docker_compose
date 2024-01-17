@@ -1,0 +1,12 @@
+- name: Deploy projects_rev03
+  hosts: molecule
+  roles:
+    - docker_compose
+  vars:
+    docker_compose__projects:
+      - name: nginx
+        files_directory: ./files/projects_rev03/nginx
+      - name: nodejs
+        files_directory: ./files/projects_rev03/nodejs
+      - name: redis
+        files_directory: ./files/projects_rev03/redis
