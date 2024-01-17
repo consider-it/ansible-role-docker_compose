@@ -1,0 +1,10 @@
+# Links & Resources
+# - https://hub.docker.com/_/nginx
+
+services:
+  nginx:
+    image: nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - "./html_sites/:/usr/share/nginx/html:ro"

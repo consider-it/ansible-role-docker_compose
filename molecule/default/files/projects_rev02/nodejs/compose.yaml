@@ -1,0 +1,8 @@
+# Links & Resources
+# - https://hub.docker.com/_/node
+
+services:
+  node:
+    build: .
+    ports:
+      - "3000:3000"

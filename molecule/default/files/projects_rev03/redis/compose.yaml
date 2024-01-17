@@ -1,0 +1,6 @@
+# Links & Resources
+# - https://hub.docker.com/_/redis
+
+services:
+  redis:
+    image: redis
