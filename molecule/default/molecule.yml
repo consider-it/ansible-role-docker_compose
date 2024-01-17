@@ -2,6 +2,9 @@ dependency:
   name: galaxy
   options:
     requirements-file: requirements.yml
+verifier:
+  name: testinfra
+  directory: tests/after_projects_rev02
 platforms:
   - name: molecule-docker-compose-role-dind
     image: dind-molecule-docker-compose-role
@@ -20,6 +23,7 @@ scenario:
     - create
     - prepare
     - side_effect side_effect_projects_rev01.yml
+    - verify tests/after_projects_rev01
     - converge
     - verify
     - cleanup

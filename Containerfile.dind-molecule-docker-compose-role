@@ -4,8 +4,8 @@
 # Also see: https://github.com/docker-library/docker/
 FROM docker
 
-# Add dependencies needed for running Ansible and this role.
-RUN apk add python3 sudo rsync
+# Add dependencies needed for running Ansible, this role and tests.
+RUN apk add python3 sudo rsync coreutils curl
 # Have the docker binary where Debian has it, since this role expects it to be
 # that way.
 RUN ln -s /usr/local/bin/docker /usr/bin/docker
