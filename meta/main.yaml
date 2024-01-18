@@ -1,0 +1,8 @@
+galaxy_info:
+  author: Julian Schacher
+  description: A role for deploying and maintaining docker compose applications.
+  company: consider it GmbH
+
+  license: MIT
+
+dependencies: []
