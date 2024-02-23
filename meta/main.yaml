@@ -1,4 +1,7 @@
 galaxy_info:
+  namespace: schacher_cit
+  role_name: docker_compose
+
   author: Julian Schacher
   description: A role for deploying and maintaining docker compose applications.
   company: consider it GmbH
