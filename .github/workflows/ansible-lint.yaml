@@ -1,0 +1,16 @@
+# Links & Resources:
+# - https://ansible.readthedocs.io/projects/lint/
+# - https://github.com/ansible/ansible-lint
+# - https://ansible.readthedocs.io/projects/lint/installing/#installing-from-source-code
+
+name: ansible-lint
+on: push
+permissions: read-all
+jobs:
+  Run-ansible-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+      - name: Run ansible-lint
+        uses: ansible/ansible-lint@main
