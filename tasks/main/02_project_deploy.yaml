@@ -10,7 +10,7 @@
 
     - name: Set variable for holding currently deployed projects intially to an empty list
       ansible.builtin.set_fact:
-        docker_compose__current_projects: [ ]
+        docker_compose__current_projects: []
 
     - name: Get project names from project directory paths
       ansible.builtin.set_fact:
@@ -29,7 +29,7 @@
   block:
     - name: Set variable for holding desired projects initially to an empty list
       ansible.builtin.set_fact:
-        docker_compose__desired_projects: [ ]
+        docker_compose__desired_projects: []
 
     - name: Get project names from docker_compose__projects, which got supplied by the user
       ansible.builtin.set_fact:
